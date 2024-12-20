@@ -1,0 +1,5 @@
+*.idea
+*.env
+*.sqlite3
+/venv
+postgresql/postgresql-data/pgdata

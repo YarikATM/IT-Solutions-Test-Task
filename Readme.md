@@ -33,13 +33,29 @@ API полностью протестированно.
 ---
 
 ## Установка и запуск проекта
+## 1 Вариант:
 
-#### Для запуска необходим Docker
+#### !!Для запуска необходим Docker!!
 
 1) Необходимо переименовать .env.template файл в .env в папке app/
 2) Запустить скрипт init.sh
 
+## 2 Вариант:
+1) Необходимо переименовать .env.template файл в .env в папке app/
+2) ```cd app ```Перейти в папку django проекта
+3) В файле app/settings поменять базу данных с postgresql на sqlite раскомментировав строки с 114 по 119, и закомментировать с 104 по 113
+4) ```python manage.py makemigrations``` Создать миграции
+5) ```python manage.py migrate``` Выполнить миграции
+6) ```python manage.py collectstatic``` Собрать статические файлы
+7) ` python manage.py loaddata users.json\
+   && python manage.py loaddata cars.json\
+   && python manage.py loaddata comments.json `  (Не обязательно) Заполнить бд примерами
+8) ```python manage.py test```  (Не обязательно) Запустить тесты API
+9) ```gunicorn app.wsgi:application -c gunicorn_conf.py``` Запустить проект
+
 #### Данные для админ панели:
+При условии выполнения 7 пункта!
+
 username: admin
 
 password: admin

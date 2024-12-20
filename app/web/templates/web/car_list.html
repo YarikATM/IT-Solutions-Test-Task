@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load custom_tags %}
+
+{% block title %}Список Автомобилей{% endblock title %}
+{% block header %}Список Автомобилей{% endblock header %}
+{% block content %}
+<a type="button" class="btn btn-primary" href="{% url 'web_car_new' %}">Добавить авто</a>
+
+<form method="get" action=".">
+    <input type="text" name="q" placeholder="Поиск..." value="{{ request.GET.q }}">
+    <button  class="btn btn-primary"type="submit">Найти</button>
+</form>
+
+
+
+
+<h1>Список постов</h1>
+<div class="post-list">
+    {% for car in object_list %}
+        {% car_card car=car %}
+    {% endfor %}
+</div>
+
+
+{% include "includes/pagination.html" %}
+<script>
+</script>
+{% endblock content %}

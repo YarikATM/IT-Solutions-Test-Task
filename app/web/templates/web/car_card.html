@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+        <h4><a class='link' href="{% url 'web_car_detail' pk=car.pk %}">{{car.make}} {{car.model}}</a></h4>
+        <h5>Год выпуска: {{car.year}}</a></h5>
+        <p class="card-text">{{ car.description }}</p>
+        <div class="user">
+            <small>Владелец: {{ car.user.username}}</small>
+        </div>
+        <small>Опубликовано: {{ car.created_at }}</small>
+    </div>
+  </div>
+
+
+
+
+

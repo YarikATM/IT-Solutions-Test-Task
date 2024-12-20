@@ -1,0 +1,58 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 0,
+        "fields": {
+            "first_name": "firstName0",
+            "last_name": "lastName0",
+            "username": "testuser0",
+            "password": "pbkdf2_sha256$870000$9a6f6Rgrh68L0XPjpN6GMQ$HrZd9wh2CBJQO23BE8WZfK9mMwBALqUY3zvZauO21e0=",
+            "email": "testuser0@example.com",
+            "is_staff": false,
+            "is_superuser": false,
+            "is_active": true
+        }
+    },
+  {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "first_name": "firstName1",
+            "last_name": "lastName1",
+            "username": "testuser1",
+            "password": "pbkdf2_sha256$870000$9a6f6Rgrh68L0XPjpN6GMQ$HrZd9wh2CBJQO23BE8WZfK9mMwBALqUY3zvZauO21e0=",
+            "email": "testuser1@example.com",
+            "is_staff": false,
+            "is_superuser": false,
+            "is_active": true
+        }
+    },
+  {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "first_name": "firstName2",
+            "last_name": "lastName2",
+            "username": "testuser2",
+            "password": "pbkdf2_sha256$870000$9a6f6Rgrh68L0XPjpN6GMQ$HrZd9wh2CBJQO23BE8WZfK9mMwBALqUY3zvZauO21e0=",
+            "email": "testuser2@example.com",
+            "is_staff": false,
+            "is_superuser": false,
+            "is_active": true
+        }
+    },
+  {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "first_name": "firstName",
+            "last_name": "lastName",
+            "username": "admin",
+            "password": "pbkdf2_sha256$870000$NyEmFeBwND4IEFqMgJR4jb$PqJ8V/hUnskjuNn7gXHaQGJry6OP0WvvdKktZxtMLPI=",
+            "email": "testuser2@example.com",
+            "is_staff": true,
+            "is_superuser": true,
+            "is_active": true
+        }
+    }
+]

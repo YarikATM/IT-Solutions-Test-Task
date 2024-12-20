@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load custom_tags %}
+
+{% block title %} Удалить - {{ car.make }}{{ car.model }}{% endblock title %}
+{% block header %} Удалить - {{ car.make }}{{ car.model }}{% endblock header %}
+
+{% block content %}
+
+<p>Вы уверены, что хотите удалить "{{ car.make }}{{ car.model }}"?</p>
+
+<form action="" method="post">{% csrf_token %}
+  <button class="btn-primary" type="submit">Удалить</button>
+</form>
+
+{% endblock content %}

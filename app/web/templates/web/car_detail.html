@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}{{ car.make }}{{ car.model }}{% endblock title %}
+{% block header %}{% endblock header %}
+
+{% block content %}
+
+<h2>{{ car.make }} {{car.model}}</h2>
+<h3>Год выпуска: {{car.year}}</h3>
+<p>{{car.description}}</p>
+
+
+
+<p>Владелец: {{car.user}}</p>
+<div>Дата публикации: {{ car.created_at }}</div>
+{% if car.created_at|date:"i" != car.updated_at|date:"i" %}
+    <div>Дата обновления: {{ car.updated_at }}</div>
+{% endif %}
+
+
+
+<hr>
+    <div class="d-flex gap-1">
+        <a class="btn btn-success" href="{% url 'web_car_edit' pk=car.pk %}"> Редактировать</a>
+        <a class="btn btn-danger" href="{% url 'web_car_delete' pk=car.pk %}"> Удалить</a>
+    </div>
+<div>
+    <h2>Комментарии</h2>
+    {% if user.is_authenticated %}
+    <div  class="form">
+        <form method="post" action="{% url 'web_comments_create' pk=car.pk %}">
+            {% csrf_token %}
+            <label>
+                <textarea name="content" placeholder="Введите ваш комментарий" required></textarea>
+            </label>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    {% endif %}
+
+    <ul>
+    {% for comment in comments %}
+        <li>
+            <strong>{{ comment.user.username }}</strong>
+            <p>{{ comment.content }}</p>
+            <small>{{ comment.created_at }}</small>
+        </li>
+    {% endfor %}
+</ul>
+</div>
+
+{% endblock content %}

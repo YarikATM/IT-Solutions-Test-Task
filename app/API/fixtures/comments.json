@@ -1,0 +1,32 @@
+[
+    {
+        "model": "API.Comment",
+        "pk": 0,
+        "fields": {
+            "content": "First Comment",
+            "created_at": "2024-12-19T14:49:37.620Z",
+            "car": 0,
+            "user": 0
+        }
+    },
+  {
+        "model": "API.Comment",
+        "pk": 1,
+        "fields": {
+            "content": "Second Comment",
+            "created_at": "2024-12-19T14:49:37.620Z",
+            "car": 1,
+            "user": 1
+        }
+    },
+  {
+        "model": "API.Comment",
+        "pk": 2,
+        "fields": {
+            "content": "Third Comment",
+            "created_at": "2024-12-19T14:49:37.620Z",
+            "car": 2,
+            "user": 2
+        }
+    }
+]
